@@ -18,7 +18,7 @@ class TicketView extends StatelessWidget {
       width: size*0.85,
       height: AppLayout.getHeight(200),
       child: Container(
-        margin: const EdgeInsets.only(right: 16),
+        margin: EdgeInsets.only(right: AppLayout.getWidth(16)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
