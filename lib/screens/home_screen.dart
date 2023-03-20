@@ -1,6 +1,7 @@
 import 'package:booking_app/screens/hotel_screen.dart';
 import 'package:booking_app/screens/ticket_view.dart';
 import 'package:booking_app/utils/app_info_list.dart';
+import 'package:booking_app/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:booking_app/utils/app_styles.dart';
@@ -70,24 +71,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoming Flights",
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                        onTap: () {
-                          print("You Are Tapped");
-                        },
-                        child: Text(
-                          "View All",
-                          style: Styles.textStyle
-                              .copyWith(color: Styles.primaryColor),
-                        ))
-                  ],
-                )
+                const AppDoubleTextWidget(bigText: "Upcoming Flights", smallText: "View All")
               ],
             ),
           ),
@@ -102,24 +86,7 @@ class HomeScreen extends StatelessWidget {
           const Gap(15),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                    onTap: () {
-                      print("You Are Tapped");
-                    },
-                    child: Text(
-                      "View All",
-                      style:
-                          Styles.textStyle.copyWith(color: Styles.primaryColor),
-                    ))
-              ],
-            ),
+            child: const AppDoubleTextWidget(bigText: "Hotels", smallText: "View All"),
           ),
           const Gap(15),
           SingleChildScrollView(
